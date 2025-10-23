@@ -1,0 +1,54 @@
+    {
+    "questions": [
+        {
+        "id": "7b9e07a1-3294-4c37-8cc5-cd44e5a6cb50",
+        "title": "Capital of France?",
+        "choices": ["Paris", "London", "Rome"],
+        "goodChoice": "Paris",
+        "point": 10
+        },
+        {
+        "id": "f6c3a8dd-4a62-4b4b-a41b-316177c8efb4",
+        "title": "2 + 2 = ?",
+        "choices": ["2", "4", "5"],
+        "goodChoice": "4",
+        "point": 50
+        }
+    ],
+    "players": [
+        {
+        "id": "player-1",
+        "playerName": "darong",
+        "score": 0,
+        "answers": [
+            {
+            "id": "answer-1",
+            "questionId": "7b9e07a1-3294-4c37-8cc5-cd44e5a6cb50",
+            "answerChoice": "London"
+            },
+            {
+            "id": "answer-2",
+            "questionId": "f6c3a8dd-4a62-4b4b-a41b-316177c8efb4",
+            "answerChoice": "2"
+            }
+        ]
+        },
+        {
+        "id": "player-2",
+        "playerName": "lol",
+        "score": 0,
+        "answers": [
+            {
+            "id": "answer-3",
+            "questionId": "7b9e07a1-3294-4c37-8cc5-cd44e5a6cb50",
+            "answerChoice": "London"
+            },
+            {
+            "id": "answer-4",
+            "questionId": "f6c3a8dd-4a62-4b4b-a41b-316177c8efb4",
+            "answerChoice": "4"
+            }
+        ]
+        }
+    ]
+    }
