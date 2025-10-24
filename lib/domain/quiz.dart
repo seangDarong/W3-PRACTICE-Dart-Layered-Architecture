@@ -43,14 +43,12 @@ class Answer {
 class Quiz {
   final String id;
   List<Question> questions;
-  List<Answer> answers = [];
+
   List<Player> players = [];
 
   Quiz({required this.questions, required this.players}) : id = uuid.v4();
 
-  void addAnswer(Answer asnwer) {
-    this.answers.add(asnwer);
-  }
+
 
   int getScoreInPercentage(Player player) {
     int totalScore = 0;
@@ -76,9 +74,9 @@ class Quiz {
     return questions.firstWhere((q) => q.id == id);
   }
 
-  Answer getAnswerById(String id) {
-    return answers.firstWhere((a) => a.id == id);
-  }
+  // Answer getAnswerById(String id) {
+  //   return answers.firstWhere((a) => a.id == id);
+  // }
 }
 
 class Player {

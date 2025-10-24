@@ -1,5 +1,4 @@
 
-import 'dart:io';
 import 'domain/quiz.dart';
 import 'ui/quiz_console.dart';
 import 'data/quiz_file_provider.dart';

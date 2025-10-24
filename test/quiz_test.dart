@@ -26,7 +26,6 @@ main() {
     Answer a1 = Answer(question: q1, answerChoice: "4");
     Answer a2 = Answer(question: q2, answerChoice: "5");
     
-    quiz.answers = [a1, a2];
     player.answers = [a1, a2];
     // Check something
     expect(quiz.getScoreInPercentage(player), equals(100));
@@ -37,7 +36,6 @@ main() {
     Answer a4 = Answer(question: q4, answerChoice: "11");
     
 
-    quiz2.answers =  [a3, a4];
     player2.answers = [a3, a4];
     expect(quiz2.getScoreInPercentage(player2), equals(50));
 
