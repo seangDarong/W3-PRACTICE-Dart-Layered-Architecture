@@ -45,4 +45,16 @@ class QuizRepository {
     return Quiz(questions: questions , players: players);
     
   }
+
+  void writeQuiz(Quiz quiz) {
+    final file = File(filePath);
+
+    
+    const encoder = JsonEncoder.withIndent('  ');
+    final jsonData = encoder.convert(quiz.toJson());
+
+    
+    file.writeAsStringSync(jsonData, flush: true);
+  }
+
 }

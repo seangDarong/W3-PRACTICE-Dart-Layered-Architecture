@@ -17,6 +17,14 @@ class Question {
       required this.goodChoice,
       this.point = 1})
       : id = (id == null || id.isEmpty) ? uuid.v4() : id;
+
+      Map<String, dynamic> toJson() => {
+        'id': id,
+        'title': title,
+        'choices': choices,
+        'goodChoice': goodChoice,
+        'point': point,
+      };
 }
 
 class Answer {
@@ -38,12 +46,17 @@ class Answer {
   String toString() {
     return 'id: ${id}\n Question: ${question}\n AnswerChoice: ${answerChoice}';
   }
+
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'questionId': question.id,
+        'answerChoice': answerChoice,
+      };
 }
 
 class Quiz {
   final String id;
   List<Question> questions;
-
   List<Player> players = [];
 
   Quiz({required this.questions, required this.players}) : id = uuid.v4();
@@ -74,9 +87,10 @@ class Quiz {
     return questions.firstWhere((q) => q.id == id);
   }
 
-  // Answer getAnswerById(String id) {
-  //   return answers.firstWhere((a) => a.id == id);
-  // }
+  Map<String, dynamic> toJson() => {
+        'questions': questions.map((q) => q.toJson()).toList(),
+        'players': players.map((p) => p.toJson()).toList(),
+      };
 }
 
 class Player {
@@ -92,5 +106,11 @@ class Player {
     answers.add(answer);
   }
 
+Map<String, dynamic> toJson() => {
+        'id': id,
+        'playerName': playerName,
+        'score': score,
+        'answers': answers.map((a) => a.toJson()).toList(),
+      };
 
 }

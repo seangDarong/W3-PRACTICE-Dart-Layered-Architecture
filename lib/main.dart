@@ -23,6 +23,7 @@ void main() {
   // Quiz quiz = Quiz(questions: questions);
   Quiz quiz = quizRepo.readQuiz();
   QuizConsole console = QuizConsole(quiz: quiz);
-
   console.startQuiz();
+  quizRepo.writeQuiz(quiz);
+
 }
