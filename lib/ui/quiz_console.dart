@@ -20,7 +20,7 @@ class QuizConsole {
       print('--- Quiz Finished ---');
       break;
     }
-
+    
     Player player = Player (playerName: playerName);
     quiz.players.add(player);
 
